@@ -6,9 +6,12 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-      plugins: [tailwindcss()],
-  },
-
-  integrations: [react()]
+  site:'https://miguel15319.github.io',
+  integrations:[
+    ndx(),
+    sitemap(),
+    tailwind({
+      applyBaseStyles: false
+    })
+    ]
 });
